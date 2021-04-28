@@ -7,18 +7,18 @@ class Matrix {
     }
     output() {
         const output = [];
-        for (let i = 0; i < this.matrix.length; i++) {
-            const element = this.matrix[i];
-                element.forEach((numb, index) => { // 1
-                    if (!output[index]) {
-                        output[index] = new Array();
-                        output[index].push(numb);
-                    } else {
-                        output[index].push(numb);
-                    }
-                });
-            
-        }
+        this.matrix.forEach((element) => {
+
+            element.forEach((numb, index) => { // 1
+                if (!output[index]) {
+                    output[index] = new Array();
+                    output[index].push(numb);
+                } else {
+                    output[index].push(numb);
+                }
+            });
+
+        });
         return output;
     }
     //Big O Notation
